@@ -73,7 +73,7 @@ int main()
             default:
                 printf("No es una opcion valida");
         }//fin switch
-        if(getChar("\nDesea continuar? (Y/N)\n","\n Y o N en mayuscula\n",1,'Y','N', &ingreso) != 0)
+        if(continuar("\nDesea continuar? (Y/N)\n","\n Y o N en mayuscula\n",1,'Y','N', &ingreso) == -1)
         {
             printf("\n Error.\n");
         }

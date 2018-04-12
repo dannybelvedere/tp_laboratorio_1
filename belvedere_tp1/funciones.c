@@ -1,12 +1,5 @@
-int getMenu(float* numero1,float* numero2)
-{
-   printf("8. Ingresar primer operando (A=%f) \n, 2. Ingresar segundo operando (A=%f) \n 3. Sumar \n 4. Restar \n 5. Multiplicar \n 6. Dividir \n",numero1,numero2);
-
-}
-
-
-
-
+#include <stdio.h>
+#include <stdlib.h>
 
 float getFloat(char* mensaje,
                char* mensajeError,
@@ -33,11 +26,11 @@ float getFloat(char* mensaje,
         } while (reintentos >= 0);
         return retorno;
 }
-int getChar(char* mensaje,
+int continuar(char* mensaje,
             char* mensajeError,
             int reintentos,
-            char si,
-            char no,
+            char opcionUno,
+            char opcionDos,
             char* ingreso
             )
 {
@@ -46,9 +39,10 @@ int getChar(char* mensaje,
         do
         {
             reintentos--;
+            fflush(stdin);
             printf("%s", mensaje);
             scanf("%c", &caracter);
-            if (caracter == si || caracter == no)
+            if (caracter == opcionUno || caracter == opcionDos)
             {
                 *ingreso = caracter;
                 retorno = 0;
