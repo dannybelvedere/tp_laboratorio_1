@@ -16,14 +16,14 @@ int main()
     do
     {
         //Imprimo el menú con un printf por cada uno para legibilidad del código
-        printf("1. Ingresar primer operando (A=%.2f) \n",numero1);
-        printf("2. Ingresar segundo operando (A=%.2f) \n",numero2);
-         printf("3. Sumar \n");
-          printf("4. Restar \n");
-          printf("5. Multiplicar \n");
-          printf("6. Dividir \n");
-          printf("7. Factorial\n");
-          printf("8. Todas \n");
+        printf("1. Ingresar 1er operando (A=%.2f) \n",numero1);
+        printf("2. Ingresar 2do operando (A=%.2f) \n",numero2);
+         printf("3. Calcular la suma (A+B) \n");
+          printf("4. Calcular la resta (A-B) \n");
+          printf("5. Calcular la división (A/B) \n");
+          printf("6. Calcular la multiplicación (A*B) \n");
+          printf("7. Calcular el factorial (A!)\n");
+          printf("8. Calcular todas las operaciones \n");
           printf("9. Salir \n");
         scanf("%d",&opcionUsuario);
 
