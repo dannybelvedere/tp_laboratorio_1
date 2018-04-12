@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1523505115 source:c:\users\pc\documents\utn\tp_laboratorio_1\belvedere_tp1\funciones.c
+1523506829 source:c:\users\pc\documents\utn\tp_laboratorio_1\belvedere_tp1\funciones.c
+	<stdio.h>
+	<stdlib.h>
 
-1523504965 source:c:\users\pc\documents\utn\tp_laboratorio_1\belvedere_tp1\main.c
+1523507499 source:c:\users\pc\documents\utn\tp_laboratorio_1\belvedere_tp1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"
 
-1523504347 c:\users\pc\documents\utn\tp_laboratorio_1\belvedere_tp1\funciones.h
+1523506375 c:\users\pc\documents\utn\tp_laboratorio_1\belvedere_tp1\funciones.h
 

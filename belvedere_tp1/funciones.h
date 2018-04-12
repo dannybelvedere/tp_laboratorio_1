@@ -9,7 +9,7 @@ float getFloat(char* mensaje,
                int reintentos,
                float maximo,
                float minimo,
-               float* precio);
+               float* resultado);
 int getMenu(float* numero1,float* numero2);
 int continuar(char* mensaje,
             char* mensajeError,

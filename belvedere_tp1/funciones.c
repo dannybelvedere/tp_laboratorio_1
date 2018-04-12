@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 float getFloat(char* mensaje,
                char* mensajeError,
                int reintentos,
                float maximo,
                float minimo,
-               float* precio)
+               float* resultado)
 {
         int retorno = -1;
         float valor;
@@ -14,10 +13,11 @@ float getFloat(char* mensaje,
         {
             reintentos--;
             printf("%s", mensaje);
+            fflush(stdin);
             scanf("%f", &valor);
             if (valor >= minimo && valor <= maximo)
             {
-                *precio = valor;
+                *resultado = valor;
                 retorno = 0;
                 break;
             }

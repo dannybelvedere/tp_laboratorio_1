@@ -15,24 +15,44 @@ int main()
     numero2 = 0;
     do
     {
-        printf(" 1. Ingresar primer operando (A=%f) \n 2. Ingresar segundo operando (A=%f) \n 3. Sumar \n 4. Restar \n 5. Multiplicar \n 6. Dividir \n",numero1,numero2);
+        //Imprimo el menú con un printf por cada uno para legibilidad del código
+        printf("1. Ingresar primer operando (A=%.2f) \n",numero1);
+        printf("2. Ingresar segundo operando (A=%.2f) \n",numero2);
+         printf("3. Sumar \n");
+          printf("4. Restar \n");
+          printf("5. Multiplicar \n");
+          printf("6. Dividir \n");
+          printf("7. Factorial\n");
+          printf("8. Todas \n");
+          printf("9. Salir \n");
         scanf("%d",&opcionUsuario);
 
         switch (opcionUsuario)
         {
             case 1:
-                if(getFloat("Ingrese el nuevo valor del primer operando\n","no, wacho",2,10000,-10000,&operando)==0)
+                if(getFloat("Ingrese el nuevo valor del primer operando\n","[WARNING] No es un numero",2,10000,-10000,&operando)==0)
                 {
                     numero1 = operando;
                 }
+                else
+                {
+                    printf("ERROR");
+                }
                 break;
             case 2:
-                getFloat("Ingrese el nuevo valor del segundo operando:\n","no, wacho",2,10000,-10000,&operando);
+                if(getFloat("Ingrese el nuevo valor del segundo operando:\n","[WARNING] No es un numero\n",2,3.40282e+38,1.17549e-38,&operando)==0)
+                {
+                    numero2 = operando;
+                }
+                else
+                {
+                    printf("ERROR");
+                }
                 break;
             case 3:
                 if(sumaEnteros(numero1,numero2,&resultado)== 0)
                 {
-                    printf("la suma es: %.0f",resultado);
+                    printf("la suma es: %.2f",resultado);
                 } else
                 {
                     printf("La suma supera el valor máximo de un entero");
@@ -42,7 +62,7 @@ int main()
             case 4:
                 if(restarEnteros(numero1,numero2,&resultado)== 0)
                 {
-                    printf("la suma es: %.0f",resultado);
+                    printf("la suma es: %.2f",resultado);
                 } else
                 {
                     printf("La resta supera el valor maximo/minimo de un entero");
@@ -52,7 +72,7 @@ int main()
             case 5:
                 if(multiplicarEnteros(numero1,numero2,&resultado)== 0)
                 {
-                    printf("la suma es: %.0f",resultado);
+                    printf("la suma es: %.2f",resultado);
                 } else
                 {
                     printf("La resta supera el valor maximo/minimo de un entero");
@@ -66,14 +86,23 @@ int main()
                 }
                 else
                 {
-                    printf("No dividas por cero");
+                    printf("[WARNING] No dividas por cero");
                 }
 
+                break;
+            case 7:
+                printf("WAIT, TODAVIA NO TERMINE");
+                break;
+            case 8:
+                printf("WAIT, TODAVIA NO TERMINE");
+                break;
+            case 9:
+                return 0;
                 break;
             default:
                 printf("No es una opcion valida");
         }//fin switch
-        if(continuar("\nDesea continuar? (Y/N)\n","\n Y o N en mayuscula\n",1,'Y','N', &ingreso) == -1)
+        if(continuar("\nDesea continuar? (Y/N)\n","\n[WARNING] Y o N en mayuscula\n",1,'Y','N', &ingreso) == -1)
         {
             printf("\n Error.\n");
         }
